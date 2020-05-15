@@ -1,0 +1,10 @@
+<button class="btn btn-primary"
+        (click)="onShowDetails()"
+>Display Details
+</button>
+<p *ngIf="showDetails">Secret password = tuna</p>
+<p *ngFor="let detail of details; let i = index"
+   [ngStyle]="{backgroundColor: i > 4 ? 'lightblue' : 'transparent'}"
+   [ngClass]="{show: i > 4}">
+  {{detail}}
+</p>
